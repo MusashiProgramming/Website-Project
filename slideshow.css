@@ -1,0 +1,35 @@
+/* Styling the area of the slides */
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto;
+}
+
+/* Style each of the sides with a fixed width and height */
+.slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+}
+.slide-wrapper {
+    /* Add a transition to the margin-left property */
+    transition: margin-left 0.5s ease-out;
+    /* Calculate the total width on the basis of number of slides (now 5 instead of 4) */
+    width: calc(728px * 5);
+}
+
+
+/* Set the background color of each of the slides */
+.slide:nth-child(1) {
+    background: green;
+}
+.slide:nth-child(2) {
+    background: pink;
+}
+.slide:nth-child(3) {
+    background: red;
+}
+.slide:nth-child(4) {
+    background: yellow;
+}
