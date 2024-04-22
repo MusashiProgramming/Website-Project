@@ -1,35 +1,33 @@
-/* Styling the area of the slides */
-#slideshow {
-    overflow: hidden;
-    height: 510px;
-    width: 728px;
-    margin: 0 auto;
+#slides{
+	position:relative;
+	height: 53em;
+	padding: 0px;
+	margin: 0; 
+	list-style-type: none;
+}
+.slide{
+	position: absolute;
+    top: -1em;
+    left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
 }
 
-/* Style each of the sides with a fixed width and height */
-.slide {
-    float: left;
-    height: 510px;
-    width: 728px;
-}
-.slide-wrapper {
-    /* Add a transition to the margin-left property */
-    transition: margin-left 0.5s ease-out;
-    /* Calculate the total width on the basis of number of slides (now 5 instead of 4) */
-    width: calc(728px * 5);
+.showing{
+	opacity: 1;
+	z-index: 2;
 }
 
 
-/* Set the background color of each of the slides */
-.slide:nth-child(1) {
-    background: green;
-}
-.slide:nth-child(2) {
-    background: pink;
-}
-.slide:nth-child(3) {
-    background: red;
-}
-.slide:nth-child(4) {
-    background: yellow;
+.slide_content{
+    width: 100%;
+    height: 100%;
+    background-color: #607274;
 }
